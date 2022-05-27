@@ -32,7 +32,7 @@
                         <h6 class="card-title text-muted "> Please fill in this form to creat an Account! </h6>
                         <hr>
                         <div class="card-text">
-                            <form action="#" onsubmit="return validation() , callvalue()" >
+                            <form action="#" onsubmit="return validation() & callvalue()" >
                                 <div class="row">
 
                                     <div class="col">
@@ -53,7 +53,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="email"> </label>
-                                    <input type="email" class="form-control form-control" placeholder="Email"
+                                    <input type="email" class="form-control form-control" placeholder="Email"+
                                         id="email">
                                     <span id="user3" class="text-danger font-weight-bold"> </span>
 
@@ -109,39 +109,39 @@
     </div>
     <script type="text/javascript">
         function validation() {
-            var user = document.getElementById('firstName').value;
+            var Nameone  = document.getElementById('firstName').value;
 
-            var user1 = document.getElementById('lastName').value;
+            var Name2 = document.getElementById('lastName').value;
 
-            var user2 = document.getElementById('email').value;
+            var EmailId = document.getElementById('email').value;
 
-            var user3 = document.getElementById('Password1').value;
+            var Pass = document.getElementById('Password1').value;
 
-            var user4 = document.getElementById('Password2').vlaue;
+            var CheckPass = document.getElementById('Password2').value;
 
 
 
-            if (user == "") {
+            if (Nameone == "") {
                 document.getElementById("user1").innerHTML = "**enter Fname";
                 return false;
             }
 
-            if (user1 == "") {
+            if (Name2 == "") {
                 document.getElementById("user2").innerHTML = "**enter Lname";
                 return false;
             }
 
-            if (user2 == "") {
+            if (EmailId == "") {
                 document.getElementById("user3").innerHTML = "**enter email";
                 return false;
             }
 
-            if (user3 == "") {
+            if (Pass == "") {
                 document.getElementById('user4').innerHTML = "**Password requre";
                 return false;
             }
 
-            if (user4 == "") {
+            if (CheckPass == "") {
                 document.getElementById("user5").innerHTML = "**enter pws";
                 return false;
             }
@@ -150,17 +150,21 @@
         }
         function callvalue(){
 
-            var fname = document.getElementsById("firstName").value;
-            var lname = document.getElementsById("lastName").value;
-            var mail = document.getElementsById("email").value;
-            var pws = document.getElementsById("Password1").value;
-            var compws = document.getElementsById("Password2").value;
+            var fname = document.getElementById("firstName").value;
+            
+            var lname = document.getElementById("lastName").value;
+            
+            var mail = document.getElementById("email").value;
+            
+            var pws = document.getElementById("Password1").value;
+            
+            var compws = document.getElementById("Password2").value;
 
-            document.writeln("FirstName : + <br>" + fname);
-            document.writeln("LastName : + <br>" + lname);
-            document.writeln("Email : + <br>" + mail);
-            document.writeln("Password : + <br>" + pws);
-            document.writeln("confirmedpws : + <br>" + compws);
+    document.writeln("FirstName : " + fname + "<br>");
+    document.writeln("LastName : " + lname +"<br>");
+    document.writeln("Email : " + mail +"<br>");
+    document.writeln("Password :  " + pws +"<br>");
+    document.writeln("confirmedpws : " + compws +"<br>");
         }
     </script>
 </body>
