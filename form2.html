@@ -32,7 +32,7 @@
                         <h6 class="card-title text-muted "> Please fill in this form to creat an Account! </h6>
                         <hr>
                         <div class="card-text">
-                            <form action="#" onsubmit="return validation()">
+                            <form action="#" onsubmit="return validation() , callvalue()" >
                                 <div class="row">
 
                                     <div class="col">
@@ -78,8 +78,8 @@
 
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
-                                        checked>
-                                    <span id="user6" class="text-danger font-weight-bold"> </span>
+                                        checked required>
+                                    <!-- <span id="user6" class="text-danger font-weight-bold"> </span> -->
 
                                     <label class="form-check-label" for="flexCheckChecked">
                                         I accept the <a href="#"> Terms of Usage & Privacy Policy </a>
@@ -107,39 +107,62 @@
                     href="login.html">Login.</a></p>
         </div>
     </div>
-    <Script>
+    <script type="text/javascript">
         function validation() {
             var user = document.getElementById('firstName').value;
 
             var user1 = document.getElementById('lastName').value;
 
+            var user2 = document.getElementById('email').value;
+
+            var user3 = document.getElementById('Password1').value;
+
+            var user4 = document.getElementById('Password2').vlaue;
+
+
+
             if (user == "") {
                 document.getElementById("user1").innerHTML = "**enter Fname";
                 return false;
-            }
-            else {
-                return true;
             }
 
             if (user1 == "") {
                 document.getElementById("user2").innerHTML = "**enter Lname";
                 return false;
             }
-            else {
-                return true;
+
+            if (user2 == "") {
+                document.getElementById("user3").innerHTML = "**enter email";
+                return false;
             }
+
+            if (user3 == "") {
+                document.getElementById('user4').innerHTML = "**Password requre";
+                return false;
+            }
+
+            if (user4 == "") {
+                document.getElementById("user5").innerHTML = "**enter pws";
+                return false;
+            }
+
+
         }
+        function callvalue(){
 
+            var fname = document.getElementsById("firstName").value;
+            var lname = document.getElementsById("lastName").value;
+            var mail = document.getElementsById("email").value;
+            var pws = document.getElementsById("Password1").value;
+            var compws = document.getElementsById("Password2").value;
 
-
-
-
-
-
-
-
-
-    </Script>
+            document.writeln("FirstName : + <br>" + fname);
+            document.writeln("LastName : + <br>" + lname);
+            document.writeln("Email : + <br>" + mail);
+            document.writeln("Password : + <br>" + pws);
+            document.writeln("confirmedpws : + <br>" + compws);
+        }
+    </script>
 </body>
 
 </html>
