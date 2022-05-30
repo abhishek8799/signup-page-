@@ -22,151 +22,142 @@
 </head>
 
 <body>
-    <div class="container bg-primary">
-        <div class="px-5 py-5">
+  <div class="container bg-primary">
+    <div class="px-5 py-5">
 
-            <div class="global-container">
-                <div class="card login-form">
-                    <div class="card-body">
-                        <h1 class="formTitel ">Sign-Up</h1><br>
-                        <h6 class="card-title text-muted "> Please fill in this form to creat an Account! </h6>
-                        <hr>
-                        <div class="card-text">
-                            <form action="#" onsubmit="return validation() & callvalue()" >
-                                <div class="row">
+      <div class="global-container">
+        <div class="card login-form">
+          <div class="card-body">
+              <h1 class="formTitel">Sign-Up</h1><br>
+              <h6 class="card-title text-muted"> Please fill in this form to creat an Account! </h6>
+              <hr>
+              <div class="card-text">
+                <form action="#" onsubmit="return validation() , //callvalue()">
+                  <div class="row">
 
-                                    <div class="col">
-                                        <label for="firstName"> </label>
-                                        <input type="text" class="form-control form-control" placeholder="First Name "
-                                            id="firstName">
-                                        <span id="user1" class="text-danger font-weight-bold"> </span>
-                                    </div>
-
-
-                                    <div class="col">
-                                        <label for="lastName"> </label>
-                                        <input type="text" class="form-control form-control" placeholder="Last Name "
-                                            id="lastName">
-                                        <span id="user2" class="text-danger font-weight-bold"> </span>
-                                    </div>
-
-                                </div>
-                                <div class="form-group">
-                                    <label for="email"> </label>
-                                    <input type="email" class="form-control form-control" placeholder="Email"+
-                                        id="email">
-                                    <span id="user3" class="text-danger font-weight-bold"> </span>
-
-                                </div>
-
-
-                                <div class="form-group">
-                                    <label for="Password1"> </label>
-                                    <input type="password" class="form-control form-control" placeholder="Password"
-                                        id="Password1">
-                                    <span id="user4" class="text-danger font-weight-bold"> </span>
-                                </div>
-
-
-                                <div class="form-group">
-                                    <label for="Password2"> </label>
-                                    <input type="password" class="form-control form-control"
-                                        placeholder="Confirm Password" id="Password2">
-                                    <span id="user5" class="text-danger font-weight-bold"> </span>
-
-                                </div> <br>
-
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
-                                        checked required>
-                                    <!-- <span id="user6" class="text-danger font-weight-bold"> </span> -->
-
-                                    <label class="form-check-label" for="flexCheckChecked">
-                                        I accept the <a href="#"> Terms of Usage & Privacy Policy </a>
-                                    </label>
-                                </div><br>
-
-
-
-                        </div>
-                        <button type="submit" class="btn btn-primary "> Sign up</button>
-
-                        <div class="sign-up">
-
-
-                            </form>
-
-                        </div>
+                    <div class="col">
+                      <label for="firstName"></label>
+                      <input type="text" class="form-control form-control" placeholder="First Name" id="firstName">
+                      <span id="fName" class="text-danger font-weight-bold"></span>
                     </div>
+                    
+                    <div class="col">
+                      <label for="lastName"></label>
+                      <input type="text" class="form-control form-control" placeholder="Last Name" id="lastName">
+                      <span id="lName" class="text-danger font-weight-bold"></span>
+                    </div>
+                    
+                    </div>
+                    <div class="form-group">
+                        <label for="email"></label>
+                        <input type="email" class="form-control form-control" placeholder="Email" id="email">
+                        <span id="checkEmail" class="text-danger font-weight-bold"> </span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password"> </label>
+                        <input type="password" class="form-control form-control" placeholder="Password" id="password">
+                        <span id="checkpassword" class="text-danger font-weight-bold"> </span>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="checkPassword"> </label>
+                      <input type="password" class="form-control form-control" placeholder="Confirm Password" id="checkPassword">
+                      <span id="checkPasswordAgain" class="text-danger font-weight-bold"> </span>
+                    </div> <br>
+
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked required>
+                      <label class="form-check-label" for="flexCheckChecked">
+                          I accept the <a href="#"> Terms of Usage & Privacy Policy </a>
+                      </label>
+                    </div><br>
+                  </div>
+                  <button type="submit" class="btn btn-primary "> Sign up</button>
+
+                  <div class="sign-up">
+                  </form>
                 </div>
-
-
-
-            </div><br>
-            <p class="text-center text-white bg-primary"> Already have an account ? <a class="  text-white "
-                    href="login.html">Login.</a></p>
+            </div>
         </div>
+      </div><br>
+      <p class="text-center text-white bg-primary"> Already have an account ? <a class="  text-white "
+        href="login.html">Login.</a></p>
+        
+      </div>
+      
     </div>
     <script type="text/javascript">
         function validation() {
-            var Nameone  = document.getElementById('firstName').value;
-
-            var Name2 = document.getElementById('lastName').value;
-
-            var EmailId = document.getElementById('email').value;
-
-            var Pass = document.getElementById('Password1').value;
-
-            var CheckPass = document.getElementById('Password2').value;
-
-
-
-            if (Nameone == "") {
-                document.getElementById("user1").innerHTML = "**enter Fname";
-                return false;
-            }
-
-            if (Name2 == "") {
-                document.getElementById("user2").innerHTML = "**enter Lname";
-                return false;
-            }
-
-            if (EmailId == "") {
-                document.getElementById("user3").innerHTML = "**enter email";
-                return false;
-            }
-
-            if (Pass == "") {
-                document.getElementById('user4').innerHTML = "**Password requre";
-                return false;
-            }
-
-            if (CheckPass == "") {
-                document.getElementById("user5").innerHTML = "**enter pws";
-                return false;
-            }
-
-
-        }
-        function callvalue(){
-
-            var fname = document.getElementById("firstName").value;
+          const firstName = document.getElementById('firstName').value;
+          const lastName = document.getElementById('lastName').value;
+          const emailId = document.getElementById('email').value;
+          const pws = document.getElementById('password').value;
+          const checkPws = document.getElementById('checkPassword').value;
             
-            var lname = document.getElementById("lastName").value;
-            
-            var mail = document.getElementById("email").value;
-            
-            var pws = document.getElementById("Password1").value;
-            
-            var compws = document.getElementById("Password2").value;
-
-    document.writeln("FirstName : " + fname + "<br>");
-    document.writeln("LastName : " + lname +"<br>");
-    document.writeln("Email : " + mail +"<br>");
-    document.writeln("Password :  " + pws +"<br>");
-    document.writeln("confirmedpws : " + compws +"<br>");
-        }
+          if (firstName == "") {
+              document.getElementById("fName").innerHTML = "**enter Fname";
+              return false;
+          }
+  
+          if (lastName == "") {
+              document.getElementById("lName").innerHTML = "**enter Lname";
+              return false;
+          }
+  
+          if (emailId == "") {
+              document.getElementById("checkEmail").innerHTML = "**enter email";
+              return false;
+          }
+          if (pws == "") {
+              document.getElementById('checkpassword').innerHTML = "**Password requre";
+              return false;
+          }
+          if (checkPws == "") {
+              document.getElementById("checkPasswordAgain").innerHTML = "**enter pws";
+              return false;
+          }
+          }
+          function callvalue() {
+              const fname = document.getElementById("firstName").value;
+              const lname = document.getElementById("lastName").value;
+              const mail = document.getElementById("email").value;
+              const pws = document.getElementById("checkPassword").value;
+              const compws = document.getElementById("checkPasswordAgain").value;
+              
+             
+              document.writeln("FirstName : " + fname + "<br>");
+              document.writeln("LastName : " + lname + "<br>");
+              document.writeln("Email : " + mail + "<br>");
+              document.writeln("Password :  " + pws + "<br>");
+              document.writeln("confirmpws : " + compws + "<br>");
+          }
     </script>
-</body>
+    </body>
+    
+    </html>
+          
+        
+  
+  
+  
+          
+    
+    
+    
+    
+    
+            
+            
 
-</html>
+
+
+                                   
+
+
+
+
+
+
+
+
